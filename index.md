@@ -1,4 +1,6 @@
-## Welcome to GitHub Pages
+## Welcome to GitHub Pages of SparseEvoAttack
+
+This page demonstrates our latest project on Machine Learning Robustness!
 
 You can use the [editor on GitHub](https://github.com/vietvo89-ADL/SparseEvoAttack/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
