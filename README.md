@@ -2,7 +2,7 @@
 
 This is for releasing the source code of the paper "Query-Efficient Decision-Based Sparse Attacks Against Black-Box Machine Learning Models" 
 
-Archived Version: [SparseEvo Attack](https://openreview.net/forum?id=73MEhZ0anV&fbclid=IwAR3Jp9ch0L9T-V5e5K3BHDAG3uVMnjc4_DR3sxKfVVbrWdCbaMqQZB84XQE)
+Archived Version: [SparseEvo Attack](https://openreview.net/forum?id=73MEhZ0anV&fbclid=IwAR3Jp9ch0L9T-V5e5K3BHDAG3uVMnjc4_DR3sxKfVVbrWdCbaMqQZB84XQE).
 
 The project is published as part of the following paper and if you re-use our work, please cite the following paper:
 
@@ -26,6 +26,7 @@ git clone https://github.com/SparseEvoAttack/SparseEvoAttack.github.io.git
 cd SparseEvoAttack
 pip3 install -r requirements.txt
 ```
+Download a pretrained model for CIFAR-10 evaluation set [here](https://drive.google.com/file/d/1_F6R_zNqj2q2GFhwPYypBE6cCFOldtDv/view?usp=sharing). 
 
 # Run the SparseEvoAttack
 
