@@ -143,7 +143,7 @@ def load_model(net,model_path=None):
 
 # ======================== Generate CIFAR10 subset ========================
 
-def gen_rand_dataset(model,evalset, n_class, N_sam, n, flag=True, seed=None):
+def gen_rand_dataset(model,evalset, n_class, N_sam, n, targeted=True, seed=None):
     if seed != None:
         np.random.seed(seed)
         random.seed(seed)
@@ -164,7 +164,7 @@ def gen_rand_dataset(model,evalset, n_class, N_sam, n, flag=True, seed=None):
                 break
     # generate random subset for evaluation
     cnt = 0
-    if flag:
+    if targeted:
         # out: [ocla, oID, tcla, tID] => targeted attack
         #out = np.zeros((n_class*n*(n_class-1),4)).astype(int)
         out = torch.zeros((n_class*n*(n_class-1),4),dtype=int).cuda()
@@ -175,7 +175,7 @@ def gen_rand_dataset(model,evalset, n_class, N_sam, n, flag=True, seed=None):
                 for k in range(n_class):
                     if i != k:
                         idx = np.random.choice(idxs[k], 1, replace = False)
-                        out[cnt] = [i,tmp[j],k,idx]
+                        out[cnt] = torch.tensor([i,tmp[j],k,idx[0]],dtype=torch.long)
                         cnt += 1
     else:
         # out: [ocla, oID] => untargeted attack
@@ -190,9 +190,9 @@ def gen_rand_dataset(model,evalset, n_class, N_sam, n, flag=True, seed=None):
 
 # ======================== Load pre-defined ImageNet subset ========================
 
-def load_predefined_set(filename,flag):
+def load_predefined_set(filename,targeted):
     df = pd.read_csv(filename, index_col=0)
-    if flag:
+    if targeted:
         # out: [ocla, oID, tcla, tID]
         np_df = df.to_numpy()
     else:
@@ -203,21 +203,19 @@ def load_predefined_set(filename,flag):
 
     return np_df
 
-def get_evalset(model,dataset,net,input_set,seed,flag):
+def get_evalset(model,dataset,net,input_set,seed,targeted):
     if dataset == 'imagenet':
         if net == 'vit':
-            subset_path = 'vit_dataset_200_final.csv'
-            #subset_path = 'ViT_evaluation_set_ImageNet_800_full.csv'
+            subset_path = './evaluation_set/vit_dataset_200_final.csv'
         elif net == 'resnet50':
-            subset_path = 'ResNet_dataset_200_final.csv'
-            #subset_path = 'ResNet50_evaluation_set_ImageNet_800_full.csv'
-        output = load_predefined_set(subset_path,flag)
+            subset_path = './evaluation_set/ResNet_dataset_200_final.csv'
+        output = load_predefined_set(subset_path,targeted)
     elif dataset == 'cifar10' :
         evalset = input_set
         n_class = 10
         N_sam = 500
         n = 100
-        output = gen_rand_dataset(model,evalset, n_class, N_sam, n, flag,seed)
+        output = gen_rand_dataset(model,evalset, n_class, N_sam, n, targeted,seed)
     return output
 
 # ======================== Generate starting img ========================
