@@ -2,7 +2,7 @@
 
 This is for releasing the source code of the paper "Query Efficient Decision Based Sparse Attacks Against Black-Box Machine Learning Models" 
 
-Archived Version: [SparseEvo Attack](https://openreview.net/forum?id=73MEhZ0anV&fbclid=IwAR3Jp9ch0L9T-V5e5K3BHDAG3uVMnjc4_DR3sxKfVVbrWdCbaMqQZB84XQE).
+Archived Version: [SparseEvo Attack](https://arxiv.org/abs/2202.00091).
 
 The project is published as part of the following paper and if you re-use our work, please cite the following paper:
 
