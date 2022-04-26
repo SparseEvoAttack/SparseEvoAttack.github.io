@@ -2,7 +2,7 @@
 
 Reproduce our results: [GitHub](https://github.com/SparseEvoAttack/SparseEvoAttack.github.io) 
 
-Check out our paper: [Query-Efficient Decision-Based Sparse Attacks Against Black-Box Machine Learning Models](https://openreview.net/forum?id=73MEhZ0anV&fbclid=IwAR1oUjY45OGlmg0HSC9VbyZlrPifkoPSPOo5mhpCdRGUXH-7QaQ1ALV0Y7o)
+Check out our paper: [Query Efficient Decision Based Sparse Attacks Against Black-Box Machine Learning Models](https://arxiv.org/abs/2202.00091)
 
 #### ABSTRACT
 
