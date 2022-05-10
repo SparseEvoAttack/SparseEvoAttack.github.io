@@ -22,3 +22,8 @@ Figure  2:   Targeted  Attack. Malicious instances generated for a  sparse attac
 ![Figure 3](image/gh-sparse result visualization-2.svg#gh-dark-mode-only)
 
 Figure 3: Targeted Attack. Malicious instances generated for a sparse attack with different query budgets using our SparseEvo attack algorithm employed on black-box models built for the ImageNet task.
+
+#### POSTER
+
+![Figure 4](image/ICLR 2022 - poster 7.png#gh-dark-mode-only)
+
