@@ -32,7 +32,7 @@ Download a pretrained model for CIFAR-10 evaluation set [here](https://drive.goo
 
 # Evaluate SparseEvoAttack
 
-Run step-by-step with the Jupyter Notebook file *Tutorial - Evaluate Sparse Attacks on CIFAR10.ipynb*. 
+Run step-by-step with the Jupyter Notebook file *'Tutorial - Evaluate Sparse Attacks on CIFAR10.ipynb'*. 
   
 ## TODO 
-- [ ] add the testing code.
+- [ ] Add the testing code.
